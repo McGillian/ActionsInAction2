@@ -1,0 +1,21 @@
+name: MyTrainingWorkflow
+
+on: 
+  push:
+    branches: 
+      - main 
+  workflow_dispatch: 
+jobs:
+  FirstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Well, Hello GitHub Actions WORLD"
+      
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+        
+      - name: List files in directory using tree
+        - run: |
+            echo "The ActionsInAction2 Workflow dir contains these FILES:"
+            tree
+
