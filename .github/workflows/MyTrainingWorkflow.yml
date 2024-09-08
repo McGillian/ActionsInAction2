@@ -13,10 +13,14 @@ jobs:
     steps:
       - run: echo "Well, Hello GitHub Actions WORLD"
             
-      - name: Checkout
+      - name: STEP 1: Checkout
         uses: actions/checkout@v4.1.7
 
-      - name: List files in REPO
+      - name: STEP 2: List files in REPO
         run: |
           echo "The repository ActionsInAction2 contains following FILES:"
           tree
+
+      - name: STEP 3: FINAL STEP
+        run: |
+          echo "Execution of FINAL STEP"
