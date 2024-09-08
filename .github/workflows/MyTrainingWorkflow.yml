@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Well, Hello GitHub Actions WORLD"
+            
       - name: Checkout
         uses: actions/checkout@v4.1.7
         
       - name: List files in directory using tree
-        - run: |
+      - run: |
             echo "The ActionsInAction2 Workflow dir contains these FILES:"
             tree
